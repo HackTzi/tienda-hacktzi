@@ -1,6 +1,7 @@
 import React from "react";
-import "./sass/Login.scss";
 import Button from "./components/Button";
+
+import "./sass/Login.scss";
 import logo from "./assets/logo-platzi.svg";
 import facebook from "./assets/facebook.png";
 import google from "./assets/google.png";
@@ -14,6 +15,7 @@ function Login() {
           Email
           <input type="email" id="email" placeholder="Ingresa tu email" autoComplete="off" />
         </label>
+
         <label className="form--label" htmlFor="contraseña">
           Contraseña
           <input
@@ -22,6 +24,7 @@ function Login() {
             placeholder="Ingresa tu contraseña"
           />
         </label>
+
         <Button text={"Iniciar Sesión"} />
         <a href="/" className="link">
           ¿Olvidaste tu contraseña?
