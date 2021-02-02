@@ -1,0 +1,99 @@
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+body {
+  background-color: $color-background;
+}
+
+.login {
+  @include flex-column;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+  font: {
+    family: $font-base;
+    weight: 700;
+    size: $font-size-lg;
+  }
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 149px;
+  height: 47px;
+  margin-bottom: 70px
+}
+
+.form--label {
+  @include flex-column;
+  font-size: $font-size-md;
+  margin-bottom: 25px;
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.form {
+  @include flex-column;
+  width: 100%;
+  justify-content: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba($color-blue-base, 0.2);
+  outline: none;
+  font-weight: 400;
+  font-size: $font-size-md;
+  color: $color-dark-grey;
+  padding: 10px 0;
+  &::placeholder {
+    color: $color-grey-40;
+  }
+  &:focus {
+    border-bottom: 1px solid $color-blue-base;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 60px;
+  width: 190px;
+}
+
+.social--login {
+  width: 71px;
+  height: 71px;
+}
+
+.cuenta,
+.link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: $color-dark-grey;
+}
+
+.link {
+  margin-top: 30px;
+  color: $color-blue-base;
+}
+
+.social > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@include mediaQuery;
