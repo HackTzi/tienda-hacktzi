@@ -1,0 +1,22 @@
+@import "./components/variables";
+@import "./components/reset";
+
+
+.nav{
+  width: 100vw;
+  height: 76px;
+  background-color: $color-nav;
+  &__container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    li{
+      list-style: none;
+      margin-top: 8px;
+      a{
+        text-decoration: none;
+        color: $color-dark-grey;
+      }
+    }
+  }
+}
