@@ -6,16 +6,31 @@
   width: 100vw;
   height: 76px;
   background-color: $color-nav;
+  display: flex;
+  align-items: center;
   &__container{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    .icon--active {
+      opacity: 100%;
+    }
     li{
       list-style: none;
       margin-top: 8px;
+      display: flex;
+      align-items: center;
+      opacity: 40%;
+      &:hover{
+        opacity: 100%;
+      }
       a{
+        text-align: center;
         text-decoration: none;
         color: $color-dark-grey;
+      }
+      .nav--icon-cuenta img{
+        border-radius: 50%;
       }
     }
   }
