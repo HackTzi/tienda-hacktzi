@@ -20,14 +20,6 @@
   margin: 0;
 }
 
-.btn {
-  margin: 8px;
-}
-.btn:hover {
-  opacity: 85%;
-  transform: scale(1.1);
-}
-
 input[type=checkbox] {
   position: relative;
   width: 80px;
@@ -60,4 +52,12 @@ input[type=checkbox]::before {
 
 input:checked[type=checkbox]::before {
   left: 40px;
+}
+
+.btn {
+  margin: 8px;
+}
+.btn:hover {
+  opacity: 85%;
+  transform: scale(1.1);
 }
