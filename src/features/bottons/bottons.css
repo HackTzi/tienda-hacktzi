@@ -20,7 +20,7 @@
   margin: 0;
 }
 
-input[type=checkbox] {
+.check__slider input[type=checkbox] {
   position: relative;
   width: 80px;
   height: 40px;
@@ -32,12 +32,10 @@ input[type=checkbox] {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
-
-input:checked[type=checkbox] {
+.check__slider input:checked[type=checkbox] {
   background-color: #33B1FF;
 }
-
-input[type=checkbox]::before {
+.check__slider input[type=checkbox]::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -49,8 +47,7 @@ input[type=checkbox]::before {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
-
-input:checked[type=checkbox]::before {
+.check__slider input:checked[type=checkbox]::before {
   left: 40px;
 }
 
