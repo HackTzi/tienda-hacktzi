@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap");
+body {
+  background-color: #121F3D;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 149px;
+  height: 47px;
+  margin-bottom: 70px;
+}
+
+.form--label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.form--label:last-of-type {
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+input[type=email],
+input[type=password] {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(7, 145, 230, 0.2);
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #BECDE3;
+  padding: 10px 0;
+}
+input[type=email]::placeholder,
+input[type=password]::placeholder {
+  color: rgba(246, 246, 246, 0.4);
+}
+input[type=email]:focus,
+input[type=password]:focus {
+  border-bottom: 1px solid #0791E6;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 60px;
+  width: 190px;
+}
+
+.social--login {
+  width: 71px;
+  height: 71px;
+}
+
+.cuenta,
+.link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #BECDE3;
+}
+
+.link {
+  margin-top: 30px;
+  color: #0791E6;
+}
+
+.social > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .login {
+    max-width: 425px;
+  }
+}
