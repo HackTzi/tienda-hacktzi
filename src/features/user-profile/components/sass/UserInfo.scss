@@ -1,0 +1,52 @@
+@import "../../sass/utilities/variables";
+
+.profileinfo {
+  font-family: $font-base;
+  font-weight: 500;
+  font-size: $font-size-sm;
+  line-height: 16.41px;
+
+  & p {
+    margin: 0;
+  }
+
+  &__img {
+    &--avatar {
+      border-radius: 50%; 
+      position: relative;
+      bottom: 50px;  
+    }
+
+    &--country {
+      position: relative;
+      right: 20px;
+      bottom: 50px;  
+    } 
+  }
+
+  &__txt {
+    &--name {
+      font-size: $font-size-md;
+      position: relative;
+      bottom: 40px; 
+    }
+
+    &--level {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 11.72px;
+      color: $color-grey-40;
+      position: relative;
+      bottom: 35px; 
+    }
+    
+    &--intro {
+      font-size: $font-size-sm;
+      font-weight: 400;
+      line-height: 16.41px;
+      color: $color-grey-40;
+      position: relative;
+      bottom: 25px; 
+    }
+  }
+}
