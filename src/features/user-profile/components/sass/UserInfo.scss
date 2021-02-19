@@ -24,6 +24,46 @@
     } 
   }
 
+  &__progress {
+    display: flex;
+    position: relative;
+    bottom: 35px;
+    align-items: center;
+    
+    & progress {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      width: 108px;
+      height: 5px;
+      margin-right: 5px;
+
+      /* Firefox */
+      border: none;
+      background: yellow$color-grey-40;
+      border-radius: 100px;
+
+      &::-webkit-progress-bar {
+        background: $color-grey-40;
+        border-radius: 100px;
+      }
+      &::-webkit-progress-value {
+        background-color: $color-green;
+        border-radius: 100px;
+      }
+      &::-moz-progress-bar {
+        background-color: $color-grey-40;
+        border-radius: 100px;
+      }
+    }
+
+  }
+
   &__txt {
     &--name {
       font-size: $font-size-md;
@@ -36,8 +76,6 @@
       font-weight: 400;
       line-height: 11.72px;
       color: $color-grey-40;
-      position: relative;
-      bottom: 35px; 
     }
     
     &--intro {

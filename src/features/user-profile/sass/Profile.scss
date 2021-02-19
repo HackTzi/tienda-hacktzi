@@ -39,17 +39,36 @@ body {
   &__tabs {
     width: 100%;
     height: 49px;
-    display: inline-block;
-
-    &--title {
-      color: $color-grey-40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px 10px;
+    color: $color-grey-40;
+    
+    & p {
       line-height: 19px;
       font-weight: 500;
       font-size: $font-size-md;
-      text-align: center
+      text-align: center;
+      margin: 10px;
+      padding: 0px 15px 10px;
+    }
 
+    &--active {
+      color: $color-blue-base;
+      border-bottom: 2px solid $color-blue-base;
     }
   }
+    &__swag {
+      width: 100%;
+      height: 49px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 20px 10px;
+      color: $color-grey-40;
+    }  
+
 }
 
 @include mediaQuery;

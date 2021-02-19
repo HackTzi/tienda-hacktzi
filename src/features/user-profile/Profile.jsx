@@ -17,8 +17,11 @@ function Profile() {
           <EditButton text={"Editar Perfil"} />
         </div>
         <div className="profile__tabs">
-          <p className="profile__tabs--title">Swag</p>
-          <p className="profile__tabs--title">Insignias</p>
+          <p className="profile__tabs--active">Swag</p>
+          <p className="profile__tabs--inactive">Insignias</p>
+        </div>
+        <div className="profile__swag">
+          Swag
         </div>
         
 
