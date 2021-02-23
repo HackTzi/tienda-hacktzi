@@ -1,0 +1,17 @@
+@import"../login/sass/utilities/variables";
+@import"./sliders";
+
+.btn{
+  @extend %btn;
+  margin: 8px ;
+  &:hover{
+    opacity: 85%;
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+
+
