@@ -1,0 +1,53 @@
+@import "../../sass/utilities/variables";
+
+.profileSwag {
+  font-family: $font-base;
+  font-weight: 500;
+  font-size: $font-size-sm;
+  background: $color-card-products;
+  height: 237px;
+  width: 171px;
+  border-radius: 8px;
+
+  
+
+  & p {
+    margin: 0;
+  }
+
+  &__img {
+    &--photo {
+      border-radius: 10px; 
+    }
+    &--heart {
+      border-radius: 10px;
+      margin-left: auto; 
+    }
+ 
+  }
+
+  &__details {
+    display: flex;    
+  }
+
+  &__txt {
+    
+    
+
+    &--title {
+      font-size: $font-size-sm;
+      color: $color-light-grey;
+      padding: 8px 5px;
+    }
+
+    &--small {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 11.72px;
+      color: $color-grey-40;
+      padding: 0px 8px;
+      margin-bottom: 3px;
+    }
+
+  }
+}

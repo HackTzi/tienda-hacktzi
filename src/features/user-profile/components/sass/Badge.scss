@@ -1,0 +1,44 @@
+@import "../../sass/utilities/variables";
+
+.profileBadge {
+  font-family: $font-base;
+  font-weight: 500;
+  font-size: $font-size-lg;
+  background: $color-card-products;
+  height: 77px;
+  width: 377px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: spa;
+  padding: 15px 20px;
+
+  & p {
+    margin: 0;
+  }
+
+  &__details {
+    flex-direction: column;
+    align-items: center;    
+  }
+
+  &__img {
+    height: 50px;
+  }
+
+  &__txt {
+
+    &--title {
+      color: $color-light-grey;
+      padding: 5px 15px;
+    }
+
+    &--subtitle {
+      font-size: $font-size-sm;
+      font-weight: 400;
+      color: $color-grey-40;
+      padding: 0px 15px;
+    }
+
+  }
+}
+
