@@ -10,7 +10,7 @@ $color-card-products: #24385B;
 $color-grey-40: rgba(246, 246, 246, 0.4);
 $color-green: #98CA3F;
 $color-footer: #03091E;
-$color-nav: #0C1633; /* usado */
+$color-nav: #0C1633;
 $color-action-blue: #33B1FF;
 $color-yellow: #F6C443;
 
@@ -24,26 +24,3 @@ $font-size-sm: 14px;
 $font-size-md: 16px;
 $font-size-lg: 18px;
 
-// PLACEHOLDER BUTTONS
-
-%btn {
-  font-family: $font-secundary;
-  font-weight: 700;
-  font-size: 18px;
-  background-color: $color-green;
-  color: black;
-  width: 90%;
-  height: 44px;
-  border-radius: 7.03px;
-  box-shadow: 0px 3.51456px 3.51456px rgba(0, 0, 0, 0.25);
-  outline: none;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  padding: 0;
-  align-self: center;
-
-  & p {
-    margin: 0;
-  }
-}
