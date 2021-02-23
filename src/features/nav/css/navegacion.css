@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.nav {
+  width: 100vw;
+  height: 76px;
+  background-color: #0C1633;
+  display: flex;
+  align-items: center;
+}
+.nav__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.nav__container .icon--active {
+  opacity: 100%;
+}
+.nav__container li {
+  list-style: none;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  opacity: 40%;
+}
+.nav__container li:hover {
+  opacity: 100%;
+}
+.nav__container li a {
+  text-align: center;
+  text-decoration: none;
+  color: #BECDE3;
+}
+.nav__container li .nav--icon-cuenta img {
+  border-radius: 50%;
+}
