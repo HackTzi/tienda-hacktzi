@@ -1,0 +1,59 @@
+@import "./utilities/mixins";
+@import "./utilities/variables";
+
+footer
+{
+    position: relative;
+    background-color: ($color-footer);
+    width: 100%;
+    height: 327px;
+    margin: 2550px auto auto auto;
+    left: 0px;
+}
+
+footer .footer__logo
+{
+    @include flex-column;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 24px;
+}
+
+footer .footer__options
+{
+    position: absolute;
+    width: 280px;
+    height: 156px;
+    left: 24px;
+    top: 111px;
+}
+
+footer .footer__options a
+{
+    text-decoration: none;
+    font: {
+        family: $font-base;
+        size: $font-size-sm;
+      }
+      color: $color-light-grey;
+}
+
+.options
+{
+    
+    margin: 1em 0;
+    padding-left: .5em;
+    justify-content: space-between;
+    display: flex;
+}
+
+.Arrow
+{
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-left-color: #fff;
+}
+
+
+@include mediaQuery
