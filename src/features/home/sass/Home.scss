@@ -1,0 +1,58 @@
+//Variables
+$white: white;
+$bg-dark: #0C1633;
+$bg-ligth: #273B47;
+$color-line:#0791E6;
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+    hr{
+        width: 40%;
+        margin: 40px 0 20px 0;
+        border: 2px solid $color-line;
+    }
+
+    /*-----Sección Categorias destacadas----------*/
+    &__categorias{
+        width: 100%;
+        &__items{
+            margin: 0 24px 0 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    /*-----Sección Ofertas del día-----------*/
+    &__ofertas{
+        width: 100%;
+        padding: 0 15px;
+
+        &__relampago{
+            display: flex;
+            justify-content: space-around;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        &__items{
+            display: flex;
+            overflow: hidden;
+            z-index: 10;
+        }
+    }
+}
+
+.title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: $white;
+}
+.text{
+    font-size: 14px;
+    font-weight: 400;
+    color: $white;
+}
