@@ -5,10 +5,13 @@ $bg-ligth: #273B47;
 $color-line:#0791E6;
 
 .home{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5em;
+    overflow: hidden;
+
     hr{
         width: 40%;
         margin: 40px 0 20px 0;
@@ -39,7 +42,6 @@ $color-line:#0791E6;
         &__items{
             display: flex;
             overflow: hidden;
-            z-index: 10;
         }
     }
 }
@@ -56,3 +58,11 @@ $color-line:#0791E6;
     font-weight: 400;
     color: $white;
 }
+
+
+@media screen and (min-width: 769px) {
+    .home{
+        width: 425px;
+    }
+}
+

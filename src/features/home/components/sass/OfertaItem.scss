@@ -60,12 +60,13 @@ $bg-descuento: #0791E6;
         &__descuento{
             position: absolute;
             left: 48px;
-            bottom: 6px;
+            bottom: 5.8px;
             font-size: 9px;
             border-radius: 4px;
             width: 28px;
-            height: 9px;
+            height: 10px;
             text-align: center;
+            color: $whiteText;
             background: $bg-descuento;
         }
         &__like{

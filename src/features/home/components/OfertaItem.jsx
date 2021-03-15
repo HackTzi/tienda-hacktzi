@@ -10,7 +10,7 @@ function OfertaItem({imgItem, titleText, descripText, price, descuento}) {
     }
 
     return (
-        <div className="oferta">
+        <section className="oferta">
             <div className="oferta__box-img">
             <img src={imgItem} alt=''/>
             </div>
@@ -22,7 +22,7 @@ function OfertaItem({imgItem, titleText, descripText, price, descuento}) {
                 <p className="oferta__description__descuento">-{descuento}&#37;</p>
                 <img src={loveIt} href='' className='oferta__description__like'></img>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -9,6 +9,7 @@ import PlusIcon from './assets/plus-icon.png'
 import OfertaItem from './components/OfertaItem'
 import Camiseta from './assets/camiseta.png'
 import Mug from './assets/mug.png'
+import Footer from './components/Footer'
 
 function Home() {
     return (
@@ -108,6 +109,9 @@ function Home() {
                 </div>
 
             </div>
+
+            {/*Footer*/}
+            <Footer/>
 
         </div>
     )
