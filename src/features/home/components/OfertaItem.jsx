@@ -3,19 +3,19 @@ import './sass/OfertaItem.scss'
 import loveIt from '../assets/LoveIt.svg'
 
 
-function OfertaItem({imgItem, titleText, descripText, price, descuento}) {
+function OfertaItem({imgItem, titleText, descripText, price, descuento, link}) {
     
     const lastPrice = (p, d) => {
         return (p.price * (1 - (d.descuento / 100)))
     }
 
     return (
-        <section className="oferta">
-            <div className="oferta__box-img">
+        <section href="/" className="oferta">
+            <a href={link} className="oferta__box-img">
             <img src={imgItem} alt=''/>
-            </div>
+            </a>
             <div className="oferta__description">
-                <p className="oferta__description__title-text">{titleText}</p>
+                <a href={link} className="oferta__description__title-text">{titleText}</a>
                 <p className="oferta__description__descrip-text">{descripText}</p>
                 <p className="oferta__description__price">&#36;{lastPrice({price},{descuento})}</p>
                 <p className="oferta__description__last-price">&#36;{price}</p>

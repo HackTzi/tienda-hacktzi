@@ -9,8 +9,9 @@ $bg-descuento: #0791E6;
     background: $fondo;
     font-family: 'Lato';
     font-weight: 400;
-    margin-right: 21px;
     border-radius: 10px;
+    overflow: hidden;
+
     &__box-img{
         background: $whiteText;
         height: 55%;
@@ -18,8 +19,7 @@ $bg-descuento: #0791E6;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 10px 10px 0 0;
-
+        cursor: pointer;
     }
 
     &__description{
@@ -41,6 +41,8 @@ $bg-descuento: #0791E6;
             font-size: 11px;
             max-width: 100%;
             text-overflow: ellipsis;
+            cursor: pointer;
+            text-decoration: none;
         }
         &__descrip-text{
             font-size: 10px;

@@ -2,25 +2,29 @@
 $white: white;
 $bg-dark: #0C1633;
 $bg-ligth: #273B47;
-$color-line:#0791E6;
+$blue-color:#0791E6;
 
 .home{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5em;
     overflow: hidden;
 
+    //Linea Separadora
     hr{
-        width: 40%;
+        align-self: center;
+        width: 110px;
         margin: 40px 0 20px 0;
-        border: 2px solid $color-line;
+        border: 2px solid $blue-color;
+        border-radius: 2px;
     }
-
     /*-----Sección Categorias destacadas----------*/
     &__categorias{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+      
         &__items{
             margin: 0 24px 0 24px;
             display: flex;
@@ -29,9 +33,11 @@ $color-line:#0791E6;
     }
     /*-----Sección Ofertas del día-----------*/
     &__ofertas{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        padding: 0 15px;
-
+        padding-right:15px;
+        cursor: grab;
         &__relampago{
             display: flex;
             justify-content: space-around;
@@ -42,6 +48,124 @@ $color-line:#0791E6;
         &__items{
             display: flex;
             overflow: hidden;
+
+            //Desactivar las flechas y puntos del carrusel
+            .rec.rec-arrow, .rec.rec-pagination {
+                display: none;
+            }
+        }
+    }
+
+    /*---------Seccion Hashtag----------*/
+    &__hashtag{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background:  rgba(12, 22, 51, 1);
+        
+        &__items{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            &__principal{
+                width: 354px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 20px;
+                background: $blue-color;
+                color: $white;
+                overflow: hidden;
+                margin-bottom: 25px;
+
+                &__box-img{
+                    height: 82%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+                &__box-text{
+                    height: 18%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 24px;
+                    h3{
+                        letter-spacing: 12px;
+                        padding-left: 12px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+
+                }
+            }
+
+            //Desactivar las flechas y puntos del carrusel
+            .rec.rec-arrow, .rec.rec-pagination {
+                display: none;
+            }
+            &__secundarios{
+                width: 100%;
+                cursor: grab;
+            }
+
+            &__button{
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Roboto";
+                font-weight: 700;
+                font-size: 16px;
+                background-color: rgba(51, 177, 255, 1);
+                color: black;
+                width: 170px;
+                height: 35px;
+                border-radius: 5px;
+                box-shadow: 0px 3.51456px 3.51456px rgba(0, 0, 0, 0.25);
+                margin: 28px 0;
+                cursor: pointer;
+                text-transform: uppercase;
+                
+                
+                &:hover .arrow {
+                    transform: translateX(6px);
+                }
+                .arrow{
+                    margin-left: 5px;
+                   transition: .5s ;
+                }
+            }
+        }
+    }
+
+    /*----------Seccion Redes sociales---------*/
+    &__social-media{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        &__items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
         }
     }
 }
@@ -60,8 +184,15 @@ $color-line:#0791E6;
 }
 
 
+
 @media screen and (min-width: 769px) {
     .home{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home > *{
         width: 425px;
     }
 }

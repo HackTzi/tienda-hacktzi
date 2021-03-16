@@ -2,14 +2,14 @@ import React from 'react'
 import './sass/Hero.scss'
 import womanImg from '../assets/Woman.svg'
 
-function Hero() {
+function Hero({link}) {
     return (
         <section className="hero">
             <div className="hero__box-title">
                 <h1>Compra tus productos favoritos de platzi</h1>
                 <p>Comparte tu outfit con el #swagplatzi</p>
             </div>
-            <button type="submit" className="hero__button">VER OFERTAS</button>
+            <a href={link} className="hero__button">VER OFERTAS</a>
             <ul className='hero__lista'>
                 <li>Accesorios</li>
                 <li>Hoddles</li>
