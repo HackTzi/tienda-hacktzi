@@ -1,0 +1,80 @@
+$fondo: #24385B;
+$whiteText: #fff;
+$grayText: rgba(246, 246, 246, 0.4);
+$bg-descuento: #0791E6;
+
+.oferta{
+    width: 129px;
+    height: 185px;
+    background: $fondo;
+    font-family: 'Lato';
+    font-weight: 400;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__box-img{
+        background: $whiteText;
+        height: 55%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__description{
+        background: $fondo;
+        padding: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 45%;
+        overflow: hidden;
+        border-radius: 0 0 10px 10px;
+
+        &__title-text{
+            color: $whiteText;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 11px;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        &__descrip-text{
+            font-size: 10px;
+            font-weight: 400;
+            color: $grayText;
+        }
+        &__price{
+            font-size: 16px;
+            color: $whiteText;
+            font-weight: 600;
+        }
+        &__last-price{
+            font-size: 10px;
+            color: $grayText;
+            text-decoration: line-through;
+        }
+        &__descuento{
+            position: absolute;
+            left: 48px;
+            bottom: 5.8px;
+            font-size: 9px;
+            border-radius: 4px;
+            width: 28px;
+            height: 10px;
+            text-align: center;
+            color: $whiteText;
+            background: $bg-descuento;
+        }
+        &__like{
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+
+$shadow-item: #0C1633;
+$white: #EFF3F8;
+
+.item{
+    text-decoration: none;
+    color: $white;
+    width: 65px;
+    height: 105px;
+    border: 0.8px solid $white;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+    &__circle{
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: $shadow-item ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__name{
+        width: auto;
+        font-size: 14px;
+    }
+}
+

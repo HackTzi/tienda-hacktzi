@@ -1,7 +1,7 @@
 import React from "react";
 
 //assets
-import logo from "./assets/logo.svg";
+import logo from "../assets/logo.svg";
 
 //style
 import "./sass/Footer.scss";
