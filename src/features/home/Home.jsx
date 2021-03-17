@@ -145,8 +145,8 @@ function Home() {
 
                     <div className='home__ofertas__relampago__temporizador'>
                         <p>Termina en:</p> 
-                        <span className="hours">{timerHour}</span>
-                        <span className="minutes">{timerMinute}</span>
+                        <span className="hours">{timerHour}</span> &nbsp; :
+                        <span className="minutes">{timerMinute}</span> &nbsp; :
                         <span className="seconds">{timerSecond}</span>
                     </div>
                 </div>

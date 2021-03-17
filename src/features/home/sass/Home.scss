@@ -64,7 +64,6 @@ $blue-color:#0791E6;
             }
             &__temporizador{
                 display: flex;
-
                 span{
                     font-weight: 600;
                     font-size: 11px;
@@ -73,7 +72,7 @@ $blue-color:#0791E6;
                     align-items: center;
                     width: 18px;
                     height: 20px;
-                    border-radius: 1px;
+                    border-radius: 2px;
                     background: rgba(3, 9, 30, 1);
                     margin-left: 5px;
                 }
