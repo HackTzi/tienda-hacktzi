@@ -1,8 +1,22 @@
+@mixin linea-separadora ($top) {
+     //Linea Separadora
+    hr{
+        align-self: center;
+        width: 115px;
+        margin: $top 0 15px 0;
+        border: 1.5px solid $blue-color;
+        border-radius: 1.5px;
+        background-color: $blue-color;
+    }
+}
+
 //Variables
 $white: white;
 $bg-dark: #0C1633;
 $bg-ligth: #273B47;
 $blue-color:#0791E6;
+
+
 
 .home{
     width: 100%;
@@ -11,16 +25,10 @@ $blue-color:#0791E6;
     align-items: center;
     overflow: hidden;
 
-    //Linea Separadora
-    hr{
-        align-self: center;
-        width: 110px;
-        margin: 40px 0 20px 0;
-        border: 2px solid $blue-color;
-        border-radius: 2px;
-    }
+   
     /*-----Sección Categorias destacadas----------*/
     &__categorias{
+        @include linea-separadora(35px);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -33,16 +41,52 @@ $blue-color:#0791E6;
     }
     /*-----Sección Ofertas del día-----------*/
     &__ofertas{
+        @include linea-separadora(35px);
         display: flex;
         flex-direction: column;
         width: 100%;
         padding-right:15px;
         cursor: grab;
+        margin-bottom: 25px;
         &__relampago{
             display: flex;
             justify-content: space-around;
             font-size: 14px;
             margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $white;
+            
+            &__text{
+                font-size: 15px;
+                position: relative;
+                &::after{
+                    content:'';
+                    position: absolute;
+                    top: 2px;
+                    right: -20px;
+                    width: 16px;
+                    height: 16px;
+                    background: url('../assets/rayo.svg') no-repeat;
+                    background-position: center;
+                    background-size: 100% 100%;
+                }
+            }
+            &__temporizador{
+                display: flex;
+                span{
+                    font-weight: 600;
+                    font-size: 11px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 18px;
+                    height: 20px;
+                    border-radius: 2px;
+                    background: rgba(3, 9, 30, 1);
+                    margin-left: 5px;
+                }
+            }
         }
 
         &__items{
@@ -56,14 +100,25 @@ $blue-color:#0791E6;
         }
     }
 
+    /*Sección -------Comprar Kits Completos-----------*/
+    &__buy-kits{
+        @include linea-separadora(15px);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background: $bg-dark;
+    }
+
     /*---------Seccion Hashtag----------*/
     &__hashtag{
+        @include linea-separadora(15px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        background:  rgba(12, 22, 51, 1);
         
         &__items{
             width: 100%;
@@ -157,10 +212,12 @@ $blue-color:#0791E6;
 
     /*----------Seccion Redes sociales---------*/
     &__social-media{
+        @include linea-separadora(15px);
+        background: $bg-dark;
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
+        padding-bottom: 15px;
         &__items{
             display: flex;
             flex-direction: column;
@@ -177,11 +234,7 @@ $blue-color:#0791E6;
     margin-bottom: 30px;
     color: $white;
 }
-.text{
-    font-size: 14px;
-    font-weight: 400;
-    color: $white;
-}
+
 
 
 

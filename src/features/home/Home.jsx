@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef,useState} from 'react'
 //Sección Hero
 import Hero from './components/Hero'
 import './sass/Home.scss'
@@ -11,11 +11,16 @@ import PlusIcon from './assets/plus-icon.png'
 
 //Sección Ofertas del día
 import OfertaItem from './components/OfertaItem'
-import rayoIcon from './assets/rayo.svg'
 import Camiseta from './assets/camiseta.png'
 import Mug from './assets/mug.png'
+/*Temporizador*/
+
 /*------Carrusel-----*/
 import Carousel from 'react-elastic-carousel'
+
+//Seccion Compra Kits Completos
+import BuyKitComplete from './components/BuyKitComplete'
+import Sueter from './assets/sueter.png'
 
 //Sección Hashtag
 import imgHashtagPrincipal from './assets/imgHashtagPrincipal.png'
@@ -50,8 +55,53 @@ function Home() {
         { width: 560, itemsToShow: 4}
     ]
 
+    //Temporizador
+    const [timerDay, setIntervalDay] = useState(0);
+    const [timerHour, setIntervalHour] = useState(0);
+    const [timerMinute, setIntervalMinute] = useState(0);
+    const [timerSecond, setIntervalSecond] = useState(0);
+
+    let interval = useRef();
+    //function temporizador
+    function temporizador(){
+        const destino = new Date('mar 31, 2021 00:00:00').getTime();
+        interval = setInterval(() => {
+            let now = new Date().getTime();
+            let gap = destino - now; 
+
+            let second = 1000; 
+            let minute = second * 60;
+            let hour = minute * 60;
+            let day = hour * 24;
+
+            const d = Math.floor(gap / day);
+            const h = Math.floor(gap % day/ hour)
+            const m = Math.floor(gap % hour/ minute)
+            const s = Math.floor(gap % minute/ second)
+
+            if(gap < 0){
+                //Stop
+                clearInterval(interval)
+            }else{
+                //Continue
+                setIntervalDay(d)
+                setIntervalHour(h)
+                setIntervalMinute(m)
+                setIntervalSecond(s)
+            }
+        }, 1000);
+    }
+    
+    useEffect(() => {
+        temporizador();
+        return () => {
+            clearInterval(interval.current)
+        }
+    })
+
     //Variable para establecer el hashtag
     const hashtag = '#PlATZISWAG';
+
 
     return (
         <div className="home">
@@ -95,8 +145,14 @@ function Home() {
                 <header className="title">Ofertas del día</header>
 
                 <div className="home__ofertas__relampago">
-                    <p className="text icon">Ofertas relámpago</p>
-                    <p className="text">Termina en: </p>
+                    <p className='home__ofertas__relampago__text'>Ofertas relámpago</p>
+
+                    <div className='home__ofertas__relampago__temporizador'>
+                        <p>Termina en:</p> 
+                        <span className="hours">{timerHour}</span> &nbsp; :
+                        <span className="minutes">{timerMinute}</span> &nbsp; :
+                        <span className="seconds">{timerSecond}</span>
+                    </div>
                 </div>
 
                 <div className="home__ofertas__items">  
@@ -158,12 +214,14 @@ function Home() {
                 </div>
             </section>
 
-            <hr/>
-
             {/*Section ----------Compra kits Completos----*/}
-            <section className="buy-kits">
-                <header className="title">Compra Kits Completos</header>
-                
+            <section className='home__buy-kits'>
+                <hr/>
+                <BuyKitComplete
+                    fistKitLink='/'
+                    secondKitLink='/'
+                    secondKitImg={Sueter}
+                />
             </section>
 
 
@@ -210,9 +268,10 @@ function Home() {
             <section className='home__social-media'>
                 {/*Separete Line*/}
                 <hr/>
-
                 <header className="title">Síguenos en redes</header>
+
                 <div className="home__social-media__items">
+
                     <SocialMediaItem
                         socialMediaIcon={iconYou}
                         socialMediaLink='/'
