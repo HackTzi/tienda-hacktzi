@@ -1,0 +1,77 @@
+$red: rgba(236, 89, 107, 1);
+$yellow:rgba(246, 196, 67, 1);
+$green: rgba(152, 203, 63, 1);
+$blue: rgba(7, 145, 230, 1);
+
+@mixin rombo($size, $color,$positionX, $positionY) {
+    width: $size;
+    height: $size;
+    position: absolute;
+    left: $positionX;
+    top: $positionY;
+    border-radius: 23%;
+    background: $color;
+    transform: rotate(45deg);
+}
+
+@mixin item($x, $y) {
+    position: absolute;
+    left: $x;
+    bottom: $y;
+    width: 84px;
+    height: 16.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    text-decoration: none;
+    background: $green;
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: black;
+}
+
+//             rombo($size, $color,$positionX, $positionY)
+.kits{
+    position: relative;
+}
+.rombo1{@include rombo(13px, $red,    -1%, 1%);}
+.rombo2{@include rombo(13px, $yellow, 95%, 1%);}
+.rombo3{@include rombo(12px, $green,  7%, 7%);}
+.rombo4{@include rombo(9px,  $blue,   90%, 7%);}
+.rombo5{@include rombo(9px,  $red,    9%, 51%);}
+.rombo6{@include rombo(8px,  $yellow, 88%, 51%);}
+.rombo7{@include rombo(12px, $blue,   0%, 95%);}
+.rombo8{@include rombo(9px,  $green,  82%, 95%);}
+
+
+.kit-item{
+    width: 331px;
+    height: 177px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &__btn-first{
+        @include item(15px,30px)
+    }
+    &__btn-second{
+        @include item(center, 27px);
+        display: flex;
+    }
+    &__exibicion{
+        position: absolute;
+        background: white;
+        top: 15%;
+        width: 95px;
+    }
+}
+
+.one{
+    margin-bottom: 33px;
+}
+.two{
+    margin-bottom: 43px;
+}

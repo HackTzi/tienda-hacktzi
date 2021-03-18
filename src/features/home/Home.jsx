@@ -18,6 +18,10 @@ import Mug from './assets/mug.png'
 /*------Carrusel-----*/
 import Carousel from 'react-elastic-carousel'
 
+//Seccion Compra Kits Completos
+import BuyKitComplete from './components/BuyKitComplete'
+import Sueter from './assets/sueter.png'
+
 //Sección Hashtag
 import imgHashtagPrincipal from './assets/imgHashtagPrincipal.png'
 import arrow from './assets/arrow.svg'
@@ -87,17 +91,17 @@ function Home() {
             }
         }, 1000);
     }
-
-
-    //Variable para establecer el hashtag
-    const hashtag = '#PlATZISWAG';
-
+    
     useEffect(() => {
         temporizador();
         return () => {
             clearInterval(interval.current)
         }
     })
+
+    //Variable para establecer el hashtag
+    const hashtag = '#PlATZISWAG';
+
 
     return (
         <div className="home">
@@ -210,12 +214,14 @@ function Home() {
                 </div>
             </section>
 
-            <hr/>
-
             {/*Section ----------Compra kits Completos----*/}
-            <section className="buy-kits">
-                <header className="title">Compra Kits Completos</header>
-                
+            <section className='home__buy-kits'>
+                <hr/>
+                <BuyKitComplete
+                    fistKitLink='/'
+                    secondKitLink='/'
+                    secondKitImg={Sueter}
+                />
             </section>
 
 
@@ -262,9 +268,10 @@ function Home() {
             <section className='home__social-media'>
                 {/*Separete Line*/}
                 <hr/>
-
                 <header className="title">Síguenos en redes</header>
+
                 <div className="home__social-media__items">
+
                     <SocialMediaItem
                         socialMediaIcon={iconYou}
                         socialMediaLink='/'

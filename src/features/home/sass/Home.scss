@@ -1,8 +1,22 @@
+@mixin linea-separadora ($top) {
+     //Linea Separadora
+    hr{
+        align-self: center;
+        width: 115px;
+        margin: $top 0 15px 0;
+        border: 1.5px solid $blue-color;
+        border-radius: 1.5px;
+        background-color: $blue-color;
+    }
+}
+
 //Variables
 $white: white;
 $bg-dark: #0C1633;
 $bg-ligth: #273B47;
 $blue-color:#0791E6;
+
+
 
 .home{
     width: 100%;
@@ -11,16 +25,10 @@ $blue-color:#0791E6;
     align-items: center;
     overflow: hidden;
 
-    //Linea Separadora
-    hr{
-        align-self: center;
-        width: 110px;
-        margin: 40px 0 20px 0;
-        border: 2px solid $blue-color;
-        border-radius: 2px;
-    }
+   
     /*-----Sección Categorias destacadas----------*/
     &__categorias{
+        @include linea-separadora(35px);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -33,11 +41,13 @@ $blue-color:#0791E6;
     }
     /*-----Sección Ofertas del día-----------*/
     &__ofertas{
+        @include linea-separadora(35px);
         display: flex;
         flex-direction: column;
         width: 100%;
         padding-right:15px;
         cursor: grab;
+        margin-bottom: 25px;
         &__relampago{
             display: flex;
             justify-content: space-around;
@@ -90,14 +100,24 @@ $blue-color:#0791E6;
         }
     }
 
+    /*Sección -------Comprar Kits Completos-----------*/
+    &__buy-kits{
+        @include linea-separadora(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background: $bg-dark;
+    }
+
     /*---------Seccion Hashtag----------*/
     &__hashtag{
+        @include linea-separadora(15px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        background:  rgba(12, 22, 51, 1);
         
         &__items{
             width: 100%;
@@ -191,10 +211,12 @@ $blue-color:#0791E6;
 
     /*----------Seccion Redes sociales---------*/
     &__social-media{
+        @include linea-separadora(15px);
+        background: $bg-dark;
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
+        padding-bottom: 15px;
         &__items{
             display: flex;
             flex-direction: column;
