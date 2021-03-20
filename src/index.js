@@ -6,10 +6,11 @@ import Login from './features/login/Login';
 import Profile from './features/user-profile/Profile';
 import Footer from "./features/home/components/Footer";
 import Home from './features/home/Home'
+import OnBoarding from "./features/onboarding/OnBoarding";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home/>
+    <OnBoarding/>
   </React.StrictMode>,
   document.getElementById("root")
 );
