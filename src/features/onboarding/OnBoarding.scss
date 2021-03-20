@@ -1,0 +1,64 @@
+.onboarding{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //Estilo para el componente del carrusel 
+    .rec-dot{
+        background:rgba(246, 246, 246, 0.4);
+        box-shadow: none !important;
+        height: 8px;
+        width: 8px;
+        &:active{
+            background: white;
+            box-shadow: none !important;
+        }
+        &_active{
+            width: 35px;
+            border-radius: 10px;
+        }
+    }
+    //Estilos del punto cuando se da click en un imput
+    .cJeRRR{
+        background: white !important;
+        box-shadow: none !important;
+    }
+    .rec-arrow{
+        display: none;
+    }
+    //--------------------
+    &__logo{
+        width: 125px;
+        margin: 30px 0;
+    }
+
+    &__btn{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 16px;
+        background-color: #98CA3F;
+        color: black;
+        width: 75%;
+        height: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 3.51456px 3.51456px rgba(0, 0, 0, 0.25);
+        margin: 22px 0;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: .5s ease-in-out;
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    .onboarding{
+        width: 425px;
+        height: 100vh;
+        margin: 0 auto;
+    }
+}
